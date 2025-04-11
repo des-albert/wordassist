@@ -3,7 +3,6 @@ package org.db.wordassist
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -19,7 +18,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import org.db.wordassist.ui.theme.WordAssistTheme
 
 class MainActivity : ComponentActivity() {
@@ -58,7 +56,7 @@ class MainActivity : ComponentActivity() {
           contentAlignment = Alignment.Center,
         ) {
           Text(
-            style = MaterialTheme.typography.headlineMedium,
+            style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Black,
             text = stringResource(id = R.string.app_name)
           )

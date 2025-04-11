@@ -51,6 +51,7 @@ class WordViewModel(application: Application) : AndroidViewModel(application) {
   fun updateGuess(char: Char) {
     if (currentGuess.length < 5) {
       currentGuess += char
+      currentColors[currentGuess.length - 1] = keyStates[char]  ?: currentColors[currentGuess.length - 1]
     }
   }
 

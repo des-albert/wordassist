@@ -178,7 +178,7 @@ fun WordScreen(
 
             Text(
               text = "${resultWords.size} words - time $executionTime mS",
-              fontSize = 20.sp,
+              fontSize = 14.sp,
               color = MaterialTheme.colorScheme.onTertiary,
               fontWeight = FontWeight.Normal
             )
@@ -198,12 +198,12 @@ fun WordScreen(
             ) {
               LazyVerticalGrid(
                 columns = GridCells.Fixed(3), // Use 3 columns
-                contentPadding = PaddingValues(16.dp)
+                contentPadding = PaddingValues(14.dp)
               ) {
                 itemsIndexed(resultWords) { index, word ->
                   Text(
                     text = word,
-                    fontSize = 16.sp,
+                    fontSize = 14.sp,
                     color = MaterialTheme.colorScheme.onTertiary,
                     modifier = Modifier.padding(4.dp)
                   )
