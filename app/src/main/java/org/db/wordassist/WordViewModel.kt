@@ -94,6 +94,8 @@ class WordViewModel(application: Application) : AndroidViewModel(application) {
                 greenLetters[index] = letter
                 if ( ! yellowGreenLetters.contains(letter) )
                   yellowGreenLetters.add(letter)
+                if ( yellowLetters.values.contains(letter) )
+                  yellowLetters.values.remove(letter)
               }
 
               presentColor -> {
