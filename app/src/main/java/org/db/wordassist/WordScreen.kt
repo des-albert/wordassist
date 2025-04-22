@@ -1,5 +1,6 @@
 package org.db.wordassist
 
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -99,11 +100,11 @@ fun WordScreen(
             horizontalArrangement = Arrangement.spacedBy(8.dp)
           ) {
             for (i in 0 until 5) { // Assuming the word length is 5
-
+              val boxColor = wordViewModel.currentColors[i]
               Box(
                 modifier = Modifier
                   .size(48.dp)
-                  .background(wordViewModel.currentColors[i], RoundedCornerShape(4.dp))
+                  .background(animateColorAsState(targetValue = boxColor.copy(alpha = 0.8f), label = "").value, RoundedCornerShape(4.dp))
                   .clickable {
                     wordViewModel.cycleColor(i)
                   },
